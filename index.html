@@ -15,7 +15,7 @@
         <nav>
             <a href="#univers">Univer</a>
             <a href=""> Création</a>
-            <a href=""> fiche personnage</a>
+            <a href="#personnage"> fiche personnage</a>
         </nav>
     </header>
 
@@ -30,31 +30,38 @@
             <article> Vous voila Aventurier près à pénétré dans un univers fantastique </article>
         </div>
 
-        <div> 
+        <div class="my-8"> 
             <h2> Création de personnage</h2>
             
             <form class=" flex flex-col">
                 <input type="file" name="photoPerso" value="photoPerso">
-                <input type="text" value="nom" class="w-32 border-2 border-black"> 
-                <input type="text" value="Prénom " class="w-32 border-2 border-black"> 
-                <label for="ice-cream-choice" class="w-32 border-2 border-black">métier:</label>
-                <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" class="w-32 " />
+                <input type="text" placeholder="nom" id="nom" class="w-32 border-2 border-black"> 
+                <input type="text" placeholder="Prénom " id="prenom" class="w-32 border-2 border-black"> 
+                <input type="text" placeholder="Age " id="age" pattern="[18-99]{2}" class="w-32 border-2 border-black"> 
+                
 
-                <datalist id="ice-cream-flavors">
-                    <option value="musicien"></option>
-                    <option value="mécanicien"></option>
-                    <option value="Ecrivain"></option>
-                    <option value="Historien"></option>
-                    
-                </datalist>
-                <button type="submit">Envoyer</button>
+                <select name="metier" id="metier"  class="w-32 border-2 border-black">
+                    <option value="musicien">musicien</option>
+                    <option value="mécanicien">mécanicien</option>
+                    <option value="Ecrivain">Ecrivain</option>
+                    <option value="Historien">Historien</option>
+                </select>
+                <button type="submit" id="bouton">Envoyer</button>
 
             </form></div>
+
+            <article id="personnage">
+                <h2>Fiche personnage</h2>
+
+                <p>Nom :</p> 
+                <p id="textNom"> </p>
+            </article>
 
     </main>
 
     <footer>
 
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
